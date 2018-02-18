@@ -66,7 +66,7 @@ public class RoundRobin {
             .comparingInt(Process::getArrivalTime)
             .thenComparing(Process::getId));
     private static ArrayList<Process> activeJobs = new ArrayList<>();
-    public static final int QUANTUM = 1;
+    private static final int QUANTUM = 1;
 
     private static void loadJobs(String[] arrivalTime, String[] jobs) {
         for (int i = 0; i < arrivalTime.length; i++)

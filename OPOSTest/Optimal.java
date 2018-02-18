@@ -78,9 +78,9 @@ public class Optimal {
         }
         if (tmp.isEmpty())
             return;
-        Page toLoad = tmp.pollFirst();
+        Page toChange = tmp.pollFirst();
         loaded.forEach(c -> {
-            if (c.getPageNo() == toLoad.getPageNo())
+            if (c.getPageNo() == toChange.getPageNo())
                 c.setPageNo(page);
         });
     }

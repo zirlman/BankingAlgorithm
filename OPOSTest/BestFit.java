@@ -42,7 +42,7 @@ public class BestFit {
     private static void loadBlocks(String[] blocks, String[] used) {
         for (int i = 0; i < blocks.length; i++)
             memory.add(new MemoryBlock(Integer.valueOf(blocks[i])));
-        for (int i = 0; i < memory.size(); ++i) {
+        for (int i = 0; i < used.length; ++i) {
             int tmp = Integer.MAX_VALUE;
             int index = -1;
             for (int j = 0; j < memory.size(); j++) {
